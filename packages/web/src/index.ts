@@ -7,10 +7,13 @@ function setAppContent(text: string) {
 
 (function () {
   const button = document.getElementById("req");
-  button?.addEventListener("click", async () => {
-    const content = await fetch("/hello");
-    const text = await content.text();
-
-    setAppContent(text);
+  button?.addEventListener("click", () => {
+    fetch("/hello")
+      .then((content) => {
+        return content.text();
+      })
+      .then((text) => {
+        setAppContent(text);
+      });
   });
 })();

@@ -7,12 +7,6 @@
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": true
   },
-  "eslint.format.enable": true,
-  "eslint.run": "onType",
-  "eslint.enable": true,
-  "eslint.options": {
-    "configFile": "./**/.eslintrc.js"
-  },
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
