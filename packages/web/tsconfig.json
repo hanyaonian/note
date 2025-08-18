@@ -15,8 +15,13 @@
     "strict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "noFallthroughCasesInSwitch": true
+    "noFallthroughCasesInSwitch": true,
+    "types": ["vite/client", "@vue/runtime-dom"],
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"]
+    }
   },
-  "include": ["./*.ts", "src/index.ts"],
+  "include": ["./*.ts", "./*.mjs", "src/**/*.ts", "src/**/*.vue"],
   "exclude": ["**/node_modules", "./dist/**/*"]
 }

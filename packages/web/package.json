@@ -1,18 +1,31 @@
 {
   "name": "web",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "type": "module",
+  "description": "Vue3 TS Tailwind",
   "scripts": {
     "dev": "vite",
-    "lint": "eslint \"{src,apps,libs,test}/**/*.ts\" --fix",
     "build": "vite build",
-    "format": "pnpm exec prettier . --write"
+    "format": "pnpm exec prettier . --write",
+    "lint": "eslint \"{src,apps,libs,test}/**/*.{ts,tsx,vue}\" --fix"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "dependencies": {
+    "tailwindcss": "^4.1.12",
+    "vue": "^3.5.18"
+  },
   "devDependencies": {
-    "vite": "^4.4.9"
+    "@tailwindcss/vite": "^4.1.12",
+    "@types/node": "^20.11.28",
+    "@vitejs/plugin-vue": "^5.0.4",
+    "@vue/runtime-dom": "^3.4.21",
+    "@vue/tsconfig": "^0.5.1",
+    "autoprefixer": "^10.4.18",
+    "postcss": "^8.4.35",
+    "typescript": "^5.2.2",
+    "vite": "^5.4.19",
+    "vue-tsc": "^1.8.27"
   }
 }
