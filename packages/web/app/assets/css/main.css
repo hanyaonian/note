@@ -1,2 +1,14 @@
 /* stylelint-disable */
 @import "tailwindcss";
+@plugin 'tailwind-scrollbar';
+@custom-variant dark (&:where(.dark, .dark *));
+
+.milkdown {
+  min-height: 100%;
+}
+
+@media (max-width: 640px) {
+  .milkdown .ProseMirror {
+    padding: 20px !important;
+  }
+}
