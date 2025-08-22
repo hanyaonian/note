@@ -1,7 +1,6 @@
 # Minimal Nuxt Note
 
 - [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction)
-- [Milkdown](https://milkdown.dev/)
 
 ## Setup
 

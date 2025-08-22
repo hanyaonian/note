@@ -10,7 +10,7 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
-    "@milkdown/crepe": "^7.15.3",
+    "marked": "^16.2.0",
     "nuxt": "^4.0.3",
     "tailwind-scrollbar": "^4.0.2",
     "tailwindcss": "^4.1.12",
