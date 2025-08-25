@@ -1,6 +1,6 @@
 :root {
   --color-bg1: #fff;
-  --color-main: oklch(20% 0 0deg);
+  --color-text1: oklch(20% 0 0deg);
 }
 
 .dark {

@@ -1,4 +1,7 @@
 <template>
+  <FunctionMenu>
+    <IconButton name="view" @click="is_viewer = !is_viewer" class="mx-1" />
+  </FunctionMenu>
   <div
     class="relative flex min-h-screen flex-col justify-center overflow-hidden bg-gray-50 dark:bg-gray-900 lg:pt-8 lg:py-12 transition-colors duration-300"
   >
@@ -8,8 +11,15 @@
     <div
       class="relative w-full h-screen md:h-[80vh] bg-white dark:bg-gray-800 shadow-xl shadow-slate-700/10 dark:shadow-black/20 ring-1 ring-gray-900/5 dark:ring-gray-700/30 md:mx-auto md:max-w-3xl lg:max-w-4xl transition-colors duration-300"
     >
+      <Viewer
+        class="mx-auto h-full overflow-y-auto scrollbar-hover:scrollbar-thumb-sky-500 scrollbar-active:scrollbar-thumb-sky-400 scrollbar scrollbar-thumb-slate-700 scrollbar-track-slate-300"
+        v-if="is_viewer"
+        :content="content"
+      />
       <Editor
         class="mx-auto h-full overflow-y-auto scrollbar-hover:scrollbar-thumb-sky-500 scrollbar-active:scrollbar-thumb-sky-400 scrollbar scrollbar-thumb-slate-700 scrollbar-track-slate-300"
+        v-model="content"
+        v-else
       />
     </div>
   </div>
@@ -17,4 +27,11 @@
 
 <script setup lang="ts">
 import Editor from "@/components/editor.vue";
+import Viewer from "@/components/viewer.vue";
+
+import IconButton from "@/components/common/icon-button.vue";
+import FunctionMenu from "@/components/common/function-menu.vue";
+
+const content = ref("");
+const is_viewer = ref(false);
 </script>
